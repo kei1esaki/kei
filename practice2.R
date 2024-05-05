@@ -1,6 +1,5 @@
 #ディレクトリを検索
-getwd()
-setwd("/Users/esakikeiichi/Desktop/Applied_Data_Science/datasource")
+getwd ()
 base <- read.csv("Baseball_2016.csv")
 head(base)
 str(base)
@@ -11,7 +10,7 @@ var(base2$打率)
 sd(base2$打率)
 hist(base$年俸)
 boxplot(base$年俸)
-boxplot(年俸 ~ リーグ, data = base)
+boxplot(年俸~リーグ , data = base)
 install.packages("beeswrm")
 library(beeswarm)
 boxplot(年俸~リーグ,data=base, online=FALSE)
@@ -76,3 +75,8 @@ head(cor_df_sorted)
 value <- 0.7
 cor_df_name <- colnames(cor_df_sorted)[abs(cor_df_sorted$翌年年俸)>=value]
 print(cor_df_name)
+mreg_value  <- lm(base$翌年年俸 ~ .,)
+summary(lmObj)
+
+
+
